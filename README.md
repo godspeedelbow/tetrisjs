@@ -34,7 +34,7 @@ const {
 - `blocks`: exposes tetris blocks defined in `blocks.js`
 - `createBoard(rows, cols): board`: create a board with size of `rows` x `cols`
 - `printBoard(board): board`: `console.log`s `board`
-- `canAddBlockToBoard(board, block, row, col): boolean`: can `block` be added to `board` at position `row`, `col`
+- `canAddBlockToBoard(board, block, row, col): boolean`: can `block` be added to `board` at position `row`, `col`?
 - `addBlockToBoard(board, block, row, col): board`: create new board with `block` added to `board` at position `row`, `col`
 - `rotateBlock(block): block`: creates a new `block` turned clockwise
 - `changeCell(board, row, col, cell): board`: create new board with `cell` added to `board` at position `row`, `col`
