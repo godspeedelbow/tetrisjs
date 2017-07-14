@@ -5,9 +5,9 @@ A functional (pure, side-effect free) tetris logic libary.
 
 *NOTE*: warning I've spent only a couple hours on this so far:
 
+- likely to change
 - no tests
 - sparse example
-- likely to change
 
 ## Structure
 
@@ -32,7 +32,7 @@ const {
 ```
 
 - `blocks`: exposes tetris blocks defined in `blocks.js`
-- `createBoard(rowCount, colCount): board`: create a board with size of `rowCount` x `colCount`
+- `createBoard(rows, cols): board`: create a board with size of `rows` x `cols`
 - `printBoard(board): board`: `console.log`s `board`
 - `canAddBlockToBoard(board, block, row, col): boolean`: can `block` be added to `board` at position `row`, `col`
 - `addBlockToBoard(board, block, row, col): board`: create new board with `block` added to `board` at position `row`, `col`
