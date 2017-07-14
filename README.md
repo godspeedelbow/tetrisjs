@@ -13,9 +13,9 @@ A functional (pure, side-effect free) tetris logic libary.
 
 Works with 2 dimensional arrays (`[0][0]` = top left) to represent:
 
-- the board[rows][cols]: each cell is a number which specifies a color (specific to each type of block)
+- the `board[rows][cols]`: each cell is a number which specifies a color (specific to each type of block)
 
-- a block[rows][cols]: a tetris block (see `./blocks.js`)
+- a `block[rows][cols]`: a tetris block (see `./blocks.js`)
 
 ## Usage
 
