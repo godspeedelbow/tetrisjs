@@ -28,6 +28,7 @@ const {
     addBlockToBoard,
     rotateBlock,
     changeCell,
+    mapCells,
 } = require('./tetris') ;
 ```
 
@@ -38,6 +39,7 @@ const {
 - `addBlockToBoard(board, block, row, col): board`: create new board with `block` added to `board` at position `row`, `col`
 - `rotateBlock(block): block`: creates a new `block` turned clockwise
 - `changeCell(board, row, col, cell): board`: create new board with `cell` added to `board` at position `row`, `col`
+- `mapCells(board, callback): board`: create new board by applying `callback` on each cell in `board`
 
 ## Files
 

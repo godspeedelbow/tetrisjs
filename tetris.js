@@ -17,6 +17,7 @@ module.exports = {
     addBlockToBoard,
     rotateBlock,
     changeCell,
+    mapCells,
 };
 
 function printBoard(board) {

@@ -1,0 +1,23 @@
+{
+  "name": "tetrisjs",
+  "version": "0.0.2",
+  "description": "Functional tetris logic",
+  "main": "tetris.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godspeedelbow/tetrisjs.git"
+  },
+  "keywords": [
+    "tetris",
+    "game"
+  ],
+  "author": "godspeedelbow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/godspeedelbow/tetrisjs/issues"
+  },
+  "homepage": "https://github.com/godspeedelbow/tetrisjs#readme"
+}
