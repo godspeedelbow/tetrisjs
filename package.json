@@ -1,11 +1,13 @@
 {
   "name": "tetrisjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Functional tetris logic",
-  "main": "tetris.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node tetris.spec.js",
-    "tdd": "nodemon tetris.spec.js"
+    "test": "node src/tetris.spec.js",
+    "tdd": "nodemon src/tetris.spec.js",
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
   },
   "homepage": "https://github.com/godspeedelbow/tetrisjs#readme",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "nodemon": "^1.11.0"
   }
 }
