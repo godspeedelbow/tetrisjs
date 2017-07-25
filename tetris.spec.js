@@ -1,9 +1,66 @@
 const assert = require('assert');
 
 const {
+  canAddBlockToBoard,
   getCompletedRows,
   removeRowsAndFill,
 } = require('./tetris');
+
+/* canAddBlockToBoard */
+assert.deepEqual(canAddBlockToBoard([
+  [0],
+], [
+  [1],
+], -1, 0), false, 'cannot add block with negative row')
+
+assert.deepEqual(canAddBlockToBoard([
+  [0],
+], [
+  [1],
+], 0, -1), false, 'cannot add block with negative col')
+
+assert.deepEqual(canAddBlockToBoard([
+  [1],
+], [
+  [1],
+], 0, 0), false, 'cannot add block to filled cell')
+
+assert.deepEqual(canAddBlockToBoard([
+  [0],
+], [
+  [1],
+], 0, 1), false, 'cannot add block right of board')
+
+assert.deepEqual(canAddBlockToBoard([
+  [0],
+], [
+  [1],
+], 1, 0), false, 'cannot add block below board')
+
+assert.deepEqual(canAddBlockToBoard([
+  [0, 0],
+], [
+  [1, 1],
+], 0, 1), false, 'cannot add block that extends outside board')
+
+assert.deepEqual(canAddBlockToBoard([
+  [0],
+], [
+  [1],
+], 0, 0), true, 'can add single block to empty cell')
+
+assert.deepEqual(canAddBlockToBoard([
+  [0, 1],
+  [0, 0],
+  [1, 0],
+  [1, 1],
+], [
+  [1, 0],
+  [1, 1],
+  [0, 1],
+  [0, 0],
+], 0, 0), true, 'can add block to empty cells')
+
 
 /* getCompletedRows */
 assert.deepEqual(getCompletedRows([

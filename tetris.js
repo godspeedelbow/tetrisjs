@@ -48,6 +48,8 @@ function removeRowsAndFill(board, rows) {
 }
 
 function canAddBlockToBoard(board, block, row, col) {
+    if (row < 0 || col < 0) return false;
+
     return !findCell(block, (blockCell, blockRow, blockCol) => {
         if (blockCell === 0) return false; // ignore block's 0
         if (!isWithinBounds(board, row + blockRow, col + blockCol)) return true;
