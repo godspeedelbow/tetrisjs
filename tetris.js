@@ -19,6 +19,7 @@ module.exports = {
     changeCell,
     mapCells,
     getCompletedRows,
+    removeRowsAndFill,
 };
 
 function printBoard(board) {
@@ -37,6 +38,13 @@ function getCompletedRows(board) {
                 : false;
         })
         .filter(index => index !== false)
+}
+
+function removeRowsAndFill(board, rows) {
+    const cols = board[0].length;
+    return createBoard(rows.length, cols).concat(board
+        .filter((el, index) => rows.indexOf(index) < 0)
+    );
 }
 
 function canAddBlockToBoard(board, block, row, col) {
