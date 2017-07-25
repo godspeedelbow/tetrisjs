@@ -18,6 +18,7 @@ module.exports = {
     rotateBlock,
     changeCell,
     mapCells,
+    getCompletedRows,
 };
 
 function printBoard(board) {
@@ -26,6 +27,16 @@ function printBoard(board) {
     function printRow(row) {
         console.log(row.join(' '));
     }
+}
+
+function getCompletedRows(board) {
+    return board
+        .map((row, index) => {
+            return row.every(cell => !!cell)
+                ? index
+                : false;
+        })
+        .filter(index => index !== false)
 }
 
 function canAddBlockToBoard(board, block, row, col) {
